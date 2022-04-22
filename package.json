@@ -1,0 +1,17 @@
+{
+  "name": "fmp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+   "dev": "nw src/",
+    "prod": "nwbuild --platforms win64 --buildDir dist/ src/FMP"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nw": "^0.63.0-sdk",
+    "nw-builder": "^3.5.7"
+  }
+}

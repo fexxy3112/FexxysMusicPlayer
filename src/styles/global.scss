@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import "variables";
+*{
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+  margin:0;
+  padding:0;
+  width: 100%;
+  height: 100vh;
+  background: var(--background);
+
+  .toolbar {
+    position: fixed;
+    top: 0;
+    min-height: var(--toolbar-height);
+    max-height: var(--toolbar-height);
+    overflow: hidden;
+    background: var(--toolbar-bg);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    user-select: none;
+    padding: 0;
+    z-index: 999;
+
+    #drag {
+      width: calc(100% - 100px);
+      position: fixed;
+      -webkit-app-region: drag;
+      z-index: 999;
+      height: 30px;
+    }
+
+    #title {
+      font-size: 13px;
+      font-weight: 500;
+      color:white;
+    }
+
+    .icon {
+      margin: 6px;
+      width: 18px;
+    }
+
+    .close, .minimize, .maximize {
+      display: grid;
+      place-items: center;
+      height: var(--toolbar-height);
+      box-sizing: border-box;
+      min-width: 40px;
+      aspect-ratio: 1;
+      z-index: 99;
+    }
+
+    .minimize {
+      margin-left: auto;
+      transition: all 0.1s ease-out;
+
+      img {
+        transform: translateY(calc(-50% + 5px));
+      }
+
+      &:hover {
+        background: rgba(100, 100, 100, 0.47);
+        transition: all 0.1s ease-out;
+      }
+    }
+
+    .maximize {
+      transition: all 0.1s ease-out;
+
+      img {
+        max-height: 40%;
+      }
+
+      &:hover {
+        background: rgba(100, 100, 100, 0.47);
+        transition: all 0.1s ease-out;
+      }
+    }
+
+
+    .close {
+      transition: all 0.1s ease-out;
+
+      img {
+        max-height: 50%;
+      }
+
+      &:hover {
+        background: #e13535;
+        transition: all 0.1s ease-out;
+
+        img {
+          filter: invert(1);
+        }
+      }
+    }
+  }
+}

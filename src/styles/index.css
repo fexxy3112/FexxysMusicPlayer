@@ -1,0 +1,48 @@
+:root {
+  --primary: #181818;
+  --primary-light: #1f1f1f;
+  --background: #100f0f;
+  --toolbar-bg: transparent;
+  --toolbar-height: 40px;
+}
+
+html .playlists, body .playlists {
+  width: 205px;
+  background: var(--primary);
+  height: calc(100% - 80px);
+  padding-top: calc(var(--toolbar-height) + 10px);
+  color: white;
+}
+html .playlists span, body .playlists span {
+  margin: 0 0 10px 10px;
+  color: #cecece;
+  font-variant-caps: all-petite-caps;
+  font-size: 15px;
+  user-select: none;
+}
+html .control-panel, body .control-panel {
+  height: 80px;
+  width: 100%;
+  background: var(--primary-light);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+html .control-panel .controls, body .control-panel .controls {
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html .control-panel .controls div, body .control-panel .controls div {
+  cursor: pointer;
+  display: inline-grid;
+  place-items: center;
+}
+html .control-panel .controls div img, body .control-panel .controls div img {
+  height: 80%;
+}
+html .control-panel .volume-controls, body .control-panel .volume-controls {
+  grid-column: 3;
+}
+
+/*# sourceMappingURL=index.css.map */

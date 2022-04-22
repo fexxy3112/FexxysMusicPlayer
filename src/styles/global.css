@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+:root {
+  --primary: #181818;
+  --primary-light: #1f1f1f;
+  --background: #100f0f;
+  --toolbar-bg: transparent;
+  --toolbar-height: 40px;
+}
+
+* {
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--background);
+}
+body .toolbar {
+  position: fixed;
+  top: 0;
+  min-height: var(--toolbar-height);
+  max-height: var(--toolbar-height);
+  overflow: hidden;
+  background: var(--toolbar-bg);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  user-select: none;
+  padding: 0;
+  z-index: 999;
+}
+body .toolbar #drag {
+  width: calc(100% - 100px);
+  position: fixed;
+  -webkit-app-region: drag;
+  z-index: 999;
+  height: 30px;
+}
+body .toolbar #title {
+  font-size: 13px;
+  font-weight: 500;
+  color: white;
+}
+body .toolbar .icon {
+  margin: 6px;
+  width: 18px;
+}
+body .toolbar .close, body .toolbar .minimize, body .toolbar .maximize {
+  display: grid;
+  place-items: center;
+  height: var(--toolbar-height);
+  box-sizing: border-box;
+  min-width: 40px;
+  aspect-ratio: 1;
+  z-index: 99;
+}
+body .toolbar .minimize {
+  margin-left: auto;
+  transition: all 0.1s ease-out;
+}
+body .toolbar .minimize img {
+  transform: translateY(calc(-50% + 5px));
+}
+body .toolbar .minimize:hover {
+  background: rgba(100, 100, 100, 0.47);
+  transition: all 0.1s ease-out;
+}
+body .toolbar .maximize {
+  transition: all 0.1s ease-out;
+}
+body .toolbar .maximize img {
+  max-height: 40%;
+}
+body .toolbar .maximize:hover {
+  background: rgba(100, 100, 100, 0.47);
+  transition: all 0.1s ease-out;
+}
+body .toolbar .close {
+  transition: all 0.1s ease-out;
+}
+body .toolbar .close img {
+  max-height: 50%;
+}
+body .toolbar .close:hover {
+  background: #e13535;
+  transition: all 0.1s ease-out;
+}
+body .toolbar .close:hover img {
+  filter: invert(1);
+}
+
+/*# sourceMappingURL=global.css.map */

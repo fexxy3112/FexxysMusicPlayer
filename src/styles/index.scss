@@ -1,0 +1,49 @@
+@import "variables";
+
+html, body {
+  .playlists {
+    width: #{$playlists-panel-width};
+    background: var(--primary);
+    height: calc(100% - #{$control-panel-height});
+    padding-top: calc(var(--toolbar-height) + 10px);
+    color: white;
+    .playlist-tile{
+
+    }
+
+    span{
+      margin: 0 0 10px 10px;
+      color: #cecece;
+      font-variant-caps: all-petite-caps;
+      font-size: 15px;
+      user-select: none;
+    }
+  }
+
+  .control-panel {
+    height: #{$control-panel-height};
+    width: 100%;
+    background: var(--primary-light);
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+
+    .controls {
+      grid-column: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & div {
+        cursor: pointer;
+        display: inline-grid;
+        place-items: center;
+        img{
+          height: 80%;
+        }
+      }
+    }
+
+    .volume-controls{
+      grid-column: 3;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+//CSS
+:root{
+  //theme
+  --primary: #181818;
+  --primary-light: #1f1f1f;
+  --background: #100f0f;
+  --toolbar-bg: transparent;
+
+  //elements
+  --toolbar-height: 40px;
+}
+
+//SCSS
+
+//elements
+$control-panel-height: 80px;
+$playlists-panel-width: 205px;

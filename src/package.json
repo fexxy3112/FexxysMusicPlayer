@@ -1,0 +1,18 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "",
+  "main": "views/index.html",
+  "keywords": [],
+  "window": {
+    "title": "FMP",
+    "icon": "assets/icon.png",
+    "min_width": 500,
+    "min_height": 500,
+    "toolbar": true,
+    "frame": false,
+    "position": "center"
+  },
+  "author": "",
+  "license": "ISC"
+}
