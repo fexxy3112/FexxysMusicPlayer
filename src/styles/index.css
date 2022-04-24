@@ -11,7 +11,42 @@ html .playlists, body .playlists {
   background: var(--primary);
   height: calc(100% - 80px);
   padding-top: calc(var(--toolbar-height) + 10px);
+  box-sizing: border-box;
   color: white;
+}
+html .playlists .user, body .playlists .user {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 5px 10px 10px;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-out;
+}
+html .playlists .user .user-icon, body .playlists .user .user-icon {
+  max-width: 36px;
+  aspect-ratio: 1;
+  margin-right: 4px;
+}
+html .playlists .user .user-icon img, body .playlists .user .user-icon img {
+  height: 100%;
+  user-select: none;
+}
+html .playlists .user .username, body .playlists .user .username {
+  font-size: 14px;
+  user-select: none;
+}
+html .playlists .user .settings, body .playlists .user .settings {
+  margin-left: auto;
+  height: 100%;
+}
+html .playlists .user .settings img, body .playlists .user .settings img {
+  height: 38px;
+  user-select: none;
+}
+html .playlists .user:hover, body .playlists .user:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.2s ease-in;
 }
 html .playlists span, body .playlists span {
   margin: 0 0 10px 10px;
@@ -37,12 +72,57 @@ html .control-panel .controls div, body .control-panel .controls div {
   cursor: pointer;
   display: inline-grid;
   place-items: center;
+  margin: 0 2px;
 }
 html .control-panel .controls div img, body .control-panel .controls div img {
-  height: 80%;
+  height: 85%;
+}
+html .control-panel .controls div:not(:nth-child(3)), body .control-panel .controls div:not(:nth-child(3)) {
+  opacity: 0.7;
+}
+html .control-panel .controls div:not(:nth-child(3)):hover, body .control-panel .controls div:not(:nth-child(3)):hover {
+  opacity: 1;
+}
+html .control-panel .controls div:first-child img, html .control-panel .controls div:last-child img, body .control-panel .controls div:first-child img, body .control-panel .controls div:last-child img {
+  height: 50%;
+}
+html .control-panel .controls div:nth-child(3), body .control-panel .controls div:nth-child(3) {
+  transition: all 0.1s ease;
+}
+html .control-panel .controls div:nth-child(3):hover, body .control-panel .controls div:nth-child(3):hover {
+  transform: scale(1.05);
 }
 html .control-panel .volume-controls, body .control-panel .volume-controls {
   grid-column: 3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20px;
+}
+html .control-panel .volume-controls .slider, body .control-panel .volume-controls .slider {
+  display: flex;
+  align-items: center;
+}
+html .control-panel .volume-controls .slider input:focus, body .control-panel .volume-controls .slider input:focus {
+  outline: none;
+}
+html .control-panel .volume-controls .slider:hover input[type=range]::-webkit-slider-thumb, body .control-panel .volume-controls .slider:hover input[type=range]::-webkit-slider-thumb {
+  max-width: 15px;
+  width: 5px;
+  aspect-ratio: 1;
+}
+html .control-panel .volume-controls .slider input[type=range], body .control-panel .volume-controls .slider input[type=range] {
+  height: 5px;
+}
+html .control-panel .volume-controls .slider input[type=range]::-webkit-slider-thumb, body .control-panel .volume-controls .slider input[type=range]::-webkit-slider-thumb {
+  max-width: 0;
+  aspect-ratio: 1;
+}
+html .control-panel .volume-controls .slider input[type=range]::-webkit-slider-runnable-track, body .control-panel .volume-controls .slider input[type=range]::-webkit-slider-runnable-track {
+  border-radius: 5px;
+}
+html .control-panel .volume-controls .slider img, body .control-panel .volume-controls .slider img {
+  height: 28px;
 }
 
 /*# sourceMappingURL=index.css.map */

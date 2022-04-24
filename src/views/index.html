@@ -2,28 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dupa</title>
+    <title>FMP</title>
     <link href="../styles/global.css" rel="stylesheet">
     <link href="../styles/index.css" rel="stylesheet">
 </head>
 <body>
     <div class="playlists">
-        <div class="user"></div>
+        <div class="user">
+            <div class="user-icon"><img src="../assets/user.svg"></div>
+            <div class="username">Guest</div>
+            <div class="settings"><img src="../assets/settings.svg"></div>
+        </div>
+        <div class="nav-tile">
 
-        <div class="nav-tile"></div>
+        </div>
         <span>Playlists</span>
-        <div class="playlist-tile"></div>
+        <div class="playlist-tile">
+            <div class="playlist-icon"><img src=""></div>
+            <div class="playlist-name">Playlist</div>
+        </div>
     </div>
     <div class="main-container">
 
     </div>
     <div class="control-panel">
         <div class="controls">
+            <div><img src="../assets/shuffle.svg"></div>
             <div><img src="../assets/previous.svg"></div>
             <div><img src="../assets/play.svg"></div>
             <div><img src="../assets/next.svg"></div>
+            <div><img src="../assets/replay.svg"></div>
         </div>
-        <div class="volume-controls">SLIDER</div>
+        <div class="volume-controls">
+            <div class="slider">
+                <img src="../assets/volume_medium.svg" alt="volume">
+                <input type="range" min="0" max="100" value="50">
+            </div>
+        </div>
     </div>
 </body>
 <script src="../scripts/main.js"></script>
